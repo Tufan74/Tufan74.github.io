@@ -1,6 +1,9 @@
 
+
+
 body {
-    background-repeat: no-repeat;
+    background-image: url(b.png);
+	background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: black;
@@ -13,20 +16,40 @@ h1 {
 	font-size: 30px;
 	text-align:center;
 	border: 3px solid grey;
-	padding: 0.5px;
+	padding: 10px;
 }
 
+
+.n{
+	font-size: 20px;
+	padding-left: 25px;
+	color: grey;
+	font-family: arial;
+}
 
 p {}
 
 
 a:link, a:visited {
 	background-color: #00000058;
-	color: rgb(10, 68, 243);
+	color: rgba(10, 68, 243, 0.613);
 	padding: 3px 2px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	text-shadow: #83fe00;
   }
+
+
+
+
+#myVideo {
+	width: 400px ;
+	height: 400px;
+	position: absolute;
+	left:36%
+
+	
+}
+
+
   
