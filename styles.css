@@ -17,18 +17,16 @@ h1 {
 }
 
 
-p {
-    color: grey;
-    font-family: arial;
-}
+p {}
 
 
 a:link, a:visited {
 	background-color: #00000058;
-	color: grey;
+	color: rgb(10, 68, 243);
 	padding: 3px 2px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
+	text-shadow: #83fe00;
   }
   
