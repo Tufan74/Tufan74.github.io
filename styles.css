@@ -1,13 +1,9 @@
-
-
-
 body {
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: black;
 }
-
 
 h1 {
 	color: grey;
@@ -18,7 +14,6 @@ h1 {
 	padding: 10px;
 }
 
-
 .n{
 	font-size: 20px;
 	padding-left: 25px;
@@ -27,7 +22,6 @@ h1 {
 }
 
 p {}
-
 
 a:link, a:visited {
 	background-color: #00000058;
@@ -38,17 +32,9 @@ a:link, a:visited {
 	display: inline-block;
   }
 
-
-
-
 #myVideo {
 	width: 400px ;
 	height: 400px;
 	position: absolute;
-	left:36%
-
-	
+	left:36%	
 }
-
-
-  
