@@ -23,10 +23,57 @@ This is my first attempt to create my own website :) </p>
 </div>
 
 
-<button onclick="getLocation()">Try It</button>
+<div class="rain">
+    <div class="cloud"></div>
+</div>
 
-<p id="demo"></p>
+<script>
+function randomText(){
+    var text = "abcdefghijklmnopqrstuvwxyz";
+    var letter = text[Math.floor(Math.random()=text.length)];
+    return letter;
+}
+function rain(){
+    let cloud = document.querySelector(".cloud");
+    let e = document.createElement("div");
+    let left = Math.floor(Math.random()*310);
+    let size = Math.floor(Math.random()*1,5);
+    let duration = Math.random()*1;
+    e.classList.add("text");
+    cloud.appendChild(e);
+    e.innerText=randomText();
+    e.style.left = left +"px";
+    e.style.fontSize= 0.5+ size + "em";
+    e.style.animationDuration= 1 + duration + "s";
 
+    setTimeout(function() {
+        cloud.removeChild(e);
+        }, 2000);
+    }
+
+setInterval(function(){
+    rain();
+},20);
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+<!--
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo", style="color: white;"></p>
+-->
 
 <div style="position: absolute; bottom:0 ; left:0 ; 
 background-color: rgba(42, 34, 47, 0.351); width: 1530px; height: 50px;">    
@@ -37,8 +84,7 @@ background-color: rgba(42, 34, 47, 0.351); width: 1530px; height: 50px;">
     </div>
 </div>
 
-
-
+<!--
 <script>
     var x = document.getElementById("demo");
     
@@ -56,7 +102,7 @@ background-color: rgba(42, 34, 47, 0.351); width: 1530px; height: 50px;">
     }
     </script>
 <script> src="M0.js" </script>
-
+-->
 
 <video autoplay muted loop id="myVideo">
     <source src="vid1.mp4" type="video/mp4">
