@@ -7,7 +7,6 @@
 
 	<link rel="stylesheet" href="styles.css">
     <link rel="icon" href="iconbild.png" type="0">
-    <script> src="M0.js" </script>
 
 </head>
 
@@ -20,8 +19,14 @@ Hello and welcome !
 <p>My name is Tufan and i'm studying cs at the
 <a href="https://www.uni-due.de" target="_blank">university</a>
 Duisburg-Essen.
-This is my first attempt to create my own website :) update</p>
+This is my first attempt to create my own website :) </p>
 </div>
+
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
 
 <div style="position: absolute; bottom:0 ; left:0 ; 
 background-color: rgba(42, 34, 47, 0.351); width: 1530px; height: 50px;">    
@@ -33,6 +38,23 @@ background-color: rgba(42, 34, 47, 0.351); width: 1530px; height: 50px;">
 </div>
 
 
+
+<script>
+    var x = document.getElementById("demo");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+    }
+    </script>
 <script> src="M0.js" </script>
 
 
