@@ -32,12 +32,6 @@ a:link, a:visited {
 	display: inline-block;
   }
 
-#myVideo {
-	width: 400px ;
-	height: 400px;
-	position: absolute;
-	left:36%	
-}
 
 .rain{
 	position: relative;
