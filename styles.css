@@ -3,10 +3,6 @@ body {
 	min-height: 100vh;
 }
 
-h1 {
-	color: rgb(255, 255, 255);
-	justify-content: center;
-}
 
 .header {
 	text-align: center;
@@ -17,13 +13,6 @@ h1 {
 	color: white;
 	justify-content: center;
   }
-
-.social-links {
-	display: flex;
-	justify-content: center; /* Zentriert die Links horizontal */
-	gap: 20px; 
-	font-size: 15px;
-}
 
 a:link, a:visited {
 	color: rgba(5, 66, 249, 0.623);
@@ -36,6 +25,12 @@ a:hover{
 	color: #007bff;
 }
 
+.social-links {
+	display: flex;
+	justify-content: center; /* Zentriert die Links horizontal */
+	gap: 20px; 
+	font-size: 15px;
+}
 
 footer {
     padding: 25px 0;
