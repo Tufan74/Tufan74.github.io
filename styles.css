@@ -11,14 +11,23 @@ body {
 	transform: translate(-50%, -50%);
 	color: white;
 	justify-content: center;
-  }
+}
+
+h1{
+	font-size: 35px;
+}
+
+p {
+	font-size: 20px;
+	line-height: 1.5;
+}
 
 a:link, a:visited {
 	color: rgba(5, 66, 249, 0.623);
 	text-align: center;
 	display: inline-block;
 	text-decoration: none;
-  }
+}
 
 a:hover{
 	color: #007bff;
@@ -26,7 +35,7 @@ a:hover{
 
 .social-links {
 	display: flex;
-	justify-content: center; /* Zentriert die Links horizontal */
+	justify-content: center;
 	gap: 20px; 
 	font-size: 15px;
 }
