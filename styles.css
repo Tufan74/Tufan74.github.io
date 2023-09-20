@@ -20,6 +20,7 @@ h1{
 p {
 	font-size: 20px;
 	line-height: 1.5;
+	color: white;
 }
 
 a:link, a:visited {
@@ -48,6 +49,20 @@ footer {
 	width: 100%;
 	text-align: center;
 }
+
+
+
+rex {
+    color: #3498db;
+    transition: color 0.5s;
+    padding: 5px;
+    display: inline-block;
+}
+
+rex:hover {
+    color: #e74c3c;
+}
+
 
 
 
