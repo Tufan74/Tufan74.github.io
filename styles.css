@@ -13,6 +13,7 @@ body {
 	justify-content: center;
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	border: 0.5px solid silver ;
+	border-radius: 30px;
 	padding: 0px 25px 10px ;
 
 }
