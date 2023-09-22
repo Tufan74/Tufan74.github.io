@@ -3,24 +3,39 @@ body {
 	min-height: 100vh;
 }
 
+
 .header {
 	text-align: center;
 	position: absolute;
 	top: 15%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: white;
+	color: rgba(255, 255, 255, 0.784);
 	justify-content: center;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	border: 0.5px solid silver ;
+	padding: 0px 25px 10px ;
+
 }
 
-h1{
-	font-size: 35px;
+h1 {
+
+	font-size: 25px;
+	animation-name: animation1;
+	animation-duration: 1s;
+	animation-direction: normal;
+	animation-timing-function: ease-in;
+	animation-iteration-count:initial;
 }
 
-p {
-	font-size: 20px;
+h2 {
+	font-size: 15px;
 	line-height: 1.5;
-	color: white;
+	animation-name: animation1;
+	animation-duration: 1s;
+	animation-direction: normal;
+	animation-timing-function: ease-in;
+	animation-iteration-count:initial;
 }
 
 a:link, a:visited {
@@ -38,7 +53,10 @@ a:hover{
 	display: flex;
 	justify-content: center;
 	gap: 20px; 
-	font-size: 15px;
+	font-size: 10px;
+	animation-name: animationFooter;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in;
 }
 
 footer {
@@ -48,32 +66,62 @@ footer {
 	left: 0;
 	width: 100%;
 	text-align: center;
+	
 }
 
 
+@keyframes animation1 {
+	from{
+		transform: translateY(-170px);
+	}
 
-rex {
-    color: #3498db;
-    transition: color 0.5s;
-    padding: 5px;
-    display: inline-block;
+	to{
+		transform: translateY(0px)
+	}
 }
 
-rex:hover {
-    color: #e74c3c;
+
+@keyframes animation2 {
+	from{
+		transform: translateX(-500px);
+	}
+	to{
+		transform: translateX(0px);
+	}	
 }
 
+@keyframes animation3 {
+	from{
+		transform: translateX(500px);
+	}
+	to{
+		transform: translateX(0px);
+	}	
+}
 
+@keyframes animationFooter {
+	from{
+		transform: translateY(200px);
+	}
+	to{
+		transform: translateY(0px);
+	}	
+}
 
+.circle1{
+	animation-name: animation2;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in;
+	width: 300px; 
+	height: 300px; 
+	position: absolute;
+}
 
-@keyframes move {
-	0%   { transform: translateY(0); }
-	50%  { transform: translateY(-20px); }
-	100% { transform: translateY(0); }
-  }
-  
-  .element {
-	animation: move 2s infinite;
-  }
-
-
+.circle2{
+	animation-name: animation3;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in;
+	width: 300px; 
+	height: 300px; 
+	position: absolute;
+}
