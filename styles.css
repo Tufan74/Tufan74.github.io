@@ -17,30 +17,30 @@ body {
 	margin: auto;
 	box-sizing: border-box;
 	width: 300px;
-	
 }
-
 
 /* funktioniert nicht richtig, die tage drüber schauen (farbwechsel)!*/ 
 
 h1 {
 	font-size: 25px;
-	animation-name: bounce;
-	animation-duration: 1.5s;
-	animation-direction: normal;
-	animation-timing-function: ease-in;
-	animation-iteration-count:initial;
+	animation: text-blur-out 1.5s reverse;
 }
+
+f{
+	animation: farbwechsel infinite 1s ;
+} 
 
 h2 {
 	font-size: 15px;
-	line-height: 1.5;
-	animation-name: bounce;
-	animation-duration: 2s;
-	animation-direction: normal;
-	animation-timing-function: ease-in;
-	animation-iteration-count:initial;
+	line-height: 1.2;
+	animation: text-blur-out 1.5s reverse;
 }
+
+.text-blur-out {
+	-webkit-animation: text-blur-out 1.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+	        animation: text-blur-out 1.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
+}
+
 
 a:link, a:visited {
 	color: rgba(5, 123, 249, 0.688);
@@ -58,9 +58,7 @@ a:hover{
 	justify-content: center;
 	gap: 20px; 
 	font-size: 10px;
-	animation-name: animationFooter;
-	animation-duration: 2s;
-	animation-timing-function: ease-in;
+	animation: animationFooter 2s ease-in;
 }
 
 footer {
@@ -73,77 +71,9 @@ footer {
 }
 
 
-.circle1{
-	animation-name: left2right;
-	animation-duration: 2s;
-	animation-timing-function: ease-in;
-	width: 300px; 
-	height: 300px;
-	position: absolute; 
-	opacity: 10%;
-	top: 250px;
-	right: 1100px;
-}
-
-.circle2{
-	animation-name: right2left;
-	animation-duration: 2s;
-	animation-timing-function: ease-in;
-	width: 300px; 
-	height: 300px; 
-	position: absolute;
-	opacity: 10%;
-	top: 250px;
-	left: 1100px;
-}
-
-/* funktioniert nicht richtig, die tage drüber schauen 
-(hover lößt animation neu aus)!*/ 
-.circle1.show:hover, .circle2.show:hover{
-	animation-name: hover;
-	animation-duration: 2s;
-	animation-timing-function:ease;
-}
-
-
-.circle1:hover, .circle2:hover {
-	animation-play-state:paused; /* Stoppe die Animation bei Hover */
-  }
-
-
-.circle1.show, .circle2.show {
-	animation-play-state: running;
-  }
-  
 
 /* Animations */
 
-@keyframes hover {
-	from{
-		transform: scale(1);
-	}
-	to{
-		transform: scale(1.3);
-	}
-}
-
-@keyframes left2right {
-	from{
-		transform: translateX(-500px);
-	}
-	to{
-		transform: translateX(0px);
-	}	
-}
-
-@keyframes right2left {
-	from{
-		transform: translateX(500px);
-	}
-	to{
-		transform: translateX(0px);
-	}	
-}
 
 @keyframes bounce {
 	0%{
@@ -186,11 +116,32 @@ footer {
 	  color: #6633ff; 
 	}
 	50%{
-		color:rgb(163, 16, 171);
+	  color:rgb(163, 16, 171);
 	}
 	100% {
 	  color: #5733ff;
 	}
-  }
+}
+
+@-webkit-keyframes text-blur-out {
+	0% {
+	  -webkit-filter: blur(0.01);
+			  filter: blur(0.01);
+	}
+	100% {
+	  -webkit-filter: blur(12px) opacity(0%);
+			  filter: blur(12px) opacity(0%);
+	}
+}
+@keyframes text-blur-out {
+	0% {
+	  -webkit-filter: blur(0.01);
+			  filter: blur(0.01);
+	}
+	100% {
+	  -webkit-filter: blur(12px) opacity(0%);
+			  filter: blur(12px) opacity(0%);
+	}
+}
   
   
