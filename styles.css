@@ -11,7 +11,7 @@ body {
 	position:relative;
 	color: rgba(255, 255, 255, 0.784);
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	border: 0.5px solid silver ;
+	border: 1px solid silver ;
 	border-radius: 30px;
 	padding: 10px;
 	margin: auto;
