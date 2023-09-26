@@ -13,16 +13,17 @@ body {
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	border: 1px solid silver ;
 	border-radius: 30px;
+	border-color: white;
 	padding: 10px;
 	margin: auto;
 	box-sizing: border-box;
 	width: 300px;
+	animation: text-blur-out 1.5s reverse, farbwechselb 1.5s infinite;
 }
 
 
 h1 {
 	font-size: 25px;
-	animation: text-blur-out 1.5s reverse;
 }
 
 f{
@@ -32,7 +33,6 @@ f{
 h2 {
 	font-size: 15px;
 	line-height: 1.2;
-	animation: text-blur-out 1.5s reverse;
 }
 
 .text-blur-out {
@@ -121,6 +121,19 @@ footer {
 	  color: #5733ff;
 	}
 }
+
+@keyframes farbwechselb {
+	0% {
+	  border-color: #6633ff; 
+	}
+	50%{
+	  border-color:rgb(163, 16, 171);
+	}
+	100% {
+	  border-color: #5733ff;
+	}
+}
+
 
 @-webkit-keyframes text-blur-out {
 	0% {
