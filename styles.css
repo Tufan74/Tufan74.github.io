@@ -4,18 +4,17 @@ body {
 	background-image: url(/images/Moon.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	font-size: 18px;
 }
 
 .header {
 	text-align: center;
-	position:relative;
 	color: rgba(255, 255, 255, 0.784);
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	border: 1px solid silver ;
 	border-radius: 30px;
-	border-color: white;
 	padding: 10px;
-	margin: auto;
+	margin: 2% auto;
 	box-sizing: border-box;
 	width: 300px;
 	animation: text-blur-out 1.5s reverse, farbwechselb 1.5s infinite;
@@ -23,7 +22,7 @@ body {
 
 
 h1 {
-	font-size: 25px;
+	font-size: 1.5em;
 }
 
 f{
@@ -31,9 +30,14 @@ f{
 } 
 
 h2 {
-	font-size: 15px;
+	font-size: 0.9em;
 	line-height: 1.2;
 }
+
+.container{
+	width:100%;
+}
+
 
 .text-blur-out {
 	-webkit-animation: text-blur-out 1.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
