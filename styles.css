@@ -124,7 +124,7 @@ header .content h1{
 
 header .content h1 span{
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px;
 }
 
 header .content p{
@@ -391,8 +391,21 @@ footer .column > a:hover{
     }
 }
 
+f{
+	animation: farbwechsel infinite 3.5s ;
+} 
 
-
+@keyframes farbwechsel {
+	0% {
+	  color: #6633ff; 
+	}
+	50%{
+	  color:rgb(163, 16, 171);
+	}
+	100% {
+	  color: #5733ff;
+	}
+}
 
 
 /*
