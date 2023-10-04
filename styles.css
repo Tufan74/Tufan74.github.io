@@ -65,11 +65,11 @@ nav{
     bottom: 0;
     left: 0;
     background-color: #4300d2;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .link a:hover::after{
-    width: 70%;
+    width: 100%;
 }
 
 .btn{
@@ -80,10 +80,12 @@ nav{
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 2px solid black;
 }
 
 .btn:hover{
-    background-color: #4300d2;
+    background-color: #1f0646;
+    border: 2px solid white;
 }
 
 .container{
@@ -96,6 +98,13 @@ nav{
     position: absolute;
     box-shadow: 0 0 1000px 50px #4300d2;
     z-index: -100;
+}
+
+.blur2{
+    position: absolute;
+    box-shadow: 0 0 1000px 60px #4300d2;
+    z-index: -100;
+    left: 90%;
 }
 
 header{
@@ -137,12 +146,12 @@ header .image{
 }
 
 header .image::before{
-    content: "o";
+    content: "🅞";
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 38rem;
+    font-size: 35rem;
     font-weight: 400;
     line-height: 20rem;
     color: #4300d2;
@@ -175,12 +184,12 @@ section .header{
     background-color: #27272a;
     padding: 1rem;
     border: 2px solid transparent;
-    border-radius: 15px;
-    transition: all 0.3s ease;
+    border-radius: 25px;
+    transition: all 0.5s ease;
 }
 
 .features .card:hover{
-    background-color: #323232;
+    background-color: #212121;
     border-color: #fff;
 }
 
@@ -240,7 +249,7 @@ section .header{
 }
 
 .pricing .card:hover{
-    background-color: #323232;
+    background-color: #212121;
     border-color: #fff;
 }
 
@@ -283,8 +292,8 @@ section .header{
 }
 
 .pricing .card button:hover{
-    background-color: #4300d2;
-    border-color: #4300d2;
+    background-color: #3602a650;
+    border-color: #ffffff;
 }
 
 footer{
@@ -297,7 +306,6 @@ footer{
 footer .column .logo{
     max-width: 100px;
     margin-bottom: 2rem;
-	margin-left: 11em;
 }
 
 footer .column p{
@@ -314,16 +322,17 @@ footer .column .socials{
 footer .column .socials a{
     color: #ccc;
     border: 1px solid #ccc;
-    padding: 5px 10px;
+    padding: 11px 11px;
     font-size: 1.25rem;
     border-radius: 100%;
     transition: all 0.3s ease;
 }
 
+
 footer .column .socials a:hover{
     color: #fff;
-    background-color: #4300d2;
-    border-color: #4300d2;
+    background-color: #4300d274;
+    border-color: #ffffff;
 }
 
 footer .column h4{
@@ -352,6 +361,7 @@ footer .column > a:hover{
     font-size: 0.8rem;
     text-align: center;
 }
+
 
 @media (width < 900px){
     .nav-links{
@@ -407,6 +417,19 @@ f{
 	  color: #5733ff;
 	}
 }
+
+@keyframes farbwechselb {
+	0% {
+	  background-color: #6633ff; 
+	}
+	50%{
+	  background-color:rgb(163, 16, 171);
+	}
+	100% {
+	  background-color: #5733ff;
+	}
+}
+
 
 
 /*
