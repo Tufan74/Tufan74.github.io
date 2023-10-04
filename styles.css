@@ -148,6 +148,7 @@ header .image::before{
     color: #4300d2;
     opacity: 0.2;
     z-index: -100;
+	animation: farbwechsel 3.5s infinite;
 }
 
 header .image img{
