@@ -7,6 +7,7 @@
     border: none;
     box-sizing: border-box;
     color: white;
+    font-size: 14px;
     
 }
 
@@ -14,6 +15,51 @@ body {
     text-align: center;
     background-color: black;
     font-family: 'Poppins', sans-serif;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 3.5rem 95rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #4300d2;
+    transition: all 0.5s ease;
+}
+
+.link a:hover::after{
+    width: 100%;
 }
 
 .blur{
@@ -30,12 +76,13 @@ body {
 
 h1{
     font-size: 3rem;
-    margin: 3rem 40rem ;
+    margin: 1rem 1rem ;
 }
 
 h1 span{
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px;
+    font-size: 40px;
 }
 
 h2{
@@ -44,15 +91,15 @@ h2{
 
 .container {
     margin: 20px auto;
-    width: 90%;
+    width: 80%;
     padding: 30px;
-    border: 2px solid rgb(53, 53, 53);
-    box-shadow: 30px 30px 30px 0px #06012a;
+    border: 2px solid rgb(78, 78, 78);
+    box-shadow: 20px 20px 30px 0px #07002c;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(24, 24, 24, 0.197);
+    background-color: #27272a;
     border-radius: 25px;
     transition: all 0.4s ease;
   }
@@ -60,7 +107,7 @@ h2{
 
 .container:hover{
     border-color: white;
-    background-color: #43434352;
+    background-color: #212121;
 
 }
 
@@ -138,13 +185,29 @@ td {
   }
 }
 
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding-top: 25px;
+}
 
+f{
+	animation: farbwechsel infinite 3.5s ;
+    font-size: 42px;
+} 
 
-
-
-
-
-
-
-
-
+@keyframes farbwechsel {
+	0% {
+	  color: #6633ff; 
+	}
+	50%{
+	  color:rgb(163, 16, 171);
+	}
+	100% {
+	  color: #5733ff;
+	}
+}
