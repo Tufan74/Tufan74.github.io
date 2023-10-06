@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tufan Pixel Art Generator</title>
+    <link rel="stylesheet" href="stylePixel.css">
+</head>
+<body>
+    <h1>Pixel Art Generator</h1>
+    <span class="blur"></span>
+    <span class="blur2"></span>
+    
+    <div class="container">
+
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker">
+        <label> Grid Height :</label>
+        <input type="number" id="inputHeight" name="height" min="3" value="10">
+        <label>Grid Width :</label>
+        <input type="number" id="inputWidth" name="width" min="3" value="10">
+        <button class="generateButton" type="submit"> submit </button>
+    </form>
+
+    <h2>Pick a Color :</h2>
+    <input type="color" id="colorPicker">
+
+    <h2>Canvas : </h2>
+    <table id="pixelCanvas"></table>
+    </div>
+
+    
+    <script src="../pixelart/pixel.js"></script>
+
+</body>
+</html>
