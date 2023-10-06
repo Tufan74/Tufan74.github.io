@@ -29,8 +29,6 @@ link3.addEventListener('click', () => {
 
 
 
-
-
 var klickbareElemente = document.querySelectorAll('.klickbaresElement');
 
 klickbareElemente.forEach(function(element) {

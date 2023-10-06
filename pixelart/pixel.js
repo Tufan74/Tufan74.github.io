@@ -1,5 +1,3 @@
-
-
 const sizePicker = document.getElementById("sizePicker");
 // Select size input
 let inputHeight = document.getElementById("inputHeight");

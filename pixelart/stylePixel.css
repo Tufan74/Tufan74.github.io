@@ -17,13 +17,13 @@ body {
 }
 
 .blur{
-    box-shadow: 500px 0 100px 50px #4300d2;
+    box-shadow: 500px 50px 200px 80px #4300d2;
     position: absolute;
     z-index: -100;
 }
 
 .blur2{
-    box-shadow: -500px 0 100px 50px #4300d2;
+    box-shadow: -500px 50px 200px 80px #4300d2;
     position: absolute;
     z-index: -100;
 }
@@ -31,6 +31,11 @@ body {
 h1{
     font-size: 3rem;
     margin: 3rem 40rem ;
+}
+
+h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
 }
 
 h2{
@@ -41,14 +46,23 @@ h2{
     margin: 20px auto;
     width: 90%;
     padding: 30px;
-    border: 3px solid #6100e8;
-    box-shadow: 30px 30px 30px 0px #2c0131;
+    border: 2px solid rgb(53, 53, 53);
+    box-shadow: 30px 30px 30px 0px #06012a;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: rgba(24, 24, 24, 0.197);
+    border-radius: 25px;
+    transition: all 0.4s ease;
   }
+
+
+.container:hover{
+    border-color: white;
+    background-color: #43434352;
+
+}
 
 #sizePicker {
   display: flex;
@@ -66,7 +80,7 @@ h2{
     vertical-align: middle;
     margin: 5px 10px 5px 0;
     padding: 10px;
-    border: 3px solid #3b0094;
+    border: 3px solid #5d5d5d;
     border-radius: 5px;
     font: inherit;
     color:black;
@@ -80,11 +94,12 @@ input[type="number"] {
 #sizePicker button {
   padding: 10px 20px;
   background-color: #4300d2;
-  border: 2px solid black;
+  border: 2px solid #4300d2;
   color: white;
   font: inherit;
   font-weight: 400;
   border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 #sizePicker button:hover {
