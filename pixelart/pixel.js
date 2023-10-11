@@ -47,3 +47,44 @@ pixelCanvas.addEventListener("click", function (e) {
 });
 
 
+// download canvas
+
+const canvasDownload = document.getElementById("canvasDownload");
+
+canvasDownload.addEventListener("click", downloadCanvas);
+
+
+function downloadCanvas() {
+  const canvas = document.createElement("canvas");
+  const rows = document.querySelectorAll("tr");
+  const height = rows.length;
+  const width = rows[0].querySelectorAll("td").length;
+
+  const canvasWidth = width * 20; // Multiplizieren Sie mit der gewünschten Skalierung
+  const canvasHeight = height * 20; // Multiplizieren Sie mit der gewünschten Skalierung
+
+  canvas.width = canvasWidth;
+  canvas.height = canvasHeight;
+
+  const ctx = canvas.getContext("2d");
+
+  ctx.imageSmoothingEnabled = false; // Schalten Sie die Bildglättung aus
+
+  rows.forEach((row, i) => {
+      const cols = row.querySelectorAll("td");
+      cols.forEach((col, j) => {
+          const color = window.getComputedStyle(col).backgroundColor;
+          ctx.fillStyle = color;
+          ctx.fillRect(j * 20, i * 20, 20, 20); // Multiplizieren Sie mit der gewünschten Skalierung
+      });
+  });
+
+  const pngDataUrl = canvas.toDataURL("image/png");
+
+  const a = document.createElement("a");
+  a.href = pngDataUrl;
+  a.download = "pixel_art.png";
+  a.click();
+}
+
+
