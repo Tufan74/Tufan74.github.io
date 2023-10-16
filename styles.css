@@ -8,7 +8,6 @@
     box-sizing: border-box;
 }
 
-
 img{
     width: 100%;
     display: flex;
@@ -20,12 +19,10 @@ a{
     color: white;
 }
 
-
 body{
     font-family: 'Poppins', sans-serif;
     background-color: black;
 }
-
 
 nav{
     max-width: 1200px;
@@ -37,12 +34,10 @@ nav{
     gap: 2rem;
 }
 
-
 .nav-logo{
 	margin: 0 20%;
     max-width: 100px;
 }
-
 
 .nav-links{
     list-style: none;
@@ -50,7 +45,6 @@ nav{
     align-items: center;
     gap: 3rem;
 }
-
 
 .link a{
     position: relative;
@@ -329,7 +323,6 @@ footer .column .socials a{
     transition: all 0.3s ease;
 }
 
-
 footer .column .socials a:hover{
     color: #fff;
     background-color: #4300d274;
@@ -435,7 +428,6 @@ f{
 
 /*
 
-
 body {
 	min-height: 100vh;
 	background-image: url(/images/Moon.svg);
@@ -443,7 +435,6 @@ body {
 	background-size: cover;
 	font-size: 18px;
 }
-
 
 .header {
 	text-align: center;
@@ -460,13 +451,11 @@ body {
 
 }
 
-
 p{
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	padding: 30px;
 	font-size: 0.8em;
 }
-
 
 h1 {
 	font-size: 1.4em;
@@ -484,7 +473,6 @@ h2 {
 .container{
 	width:100%;
 }
-
 
 .text-blur-out {
 	-webkit-animation: text-blur-out 1.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
@@ -521,9 +509,7 @@ footer {
 }
 
 
-
 // Animations 
-
 
 @keyframes bounce {
 	0%{
@@ -585,7 +571,6 @@ footer {
 	}
 }
 
-
 @-webkit-keyframes text-blur-out {
 	0% {
 	  -webkit-filter: blur(0.01);
@@ -607,6 +592,4 @@ footer {
 	}
 }
 
-
 */
-  
