@@ -237,17 +237,19 @@ body.dark-mode #algorithm-desc:focus {
     max-width: 800px;
     padding: 15px;
     border-radius: 10px;
-    background-color: #e0e0e0; /* Hellmodus Standard */
+    background-color: #afafaf; /* Hellmodus Standard */
     color: #222;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border:#6f6f6f solid 2px;
 }
 
 /* Hover: Text hervorheben */
 .description-container:hover {
-    background-color: #a0a0a0; /* dunkler im hellen Modus */
+    background-color: #747474; /* dunkler im hellen Modus */
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    border:#525252 solid 2px;
 }
 
 /* Darkmode Standard */
