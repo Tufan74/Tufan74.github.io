@@ -1,42 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tufan Pixel Art Generator</title>
+    <title>Tufan´s Pixel Art Generator</title>
     <link rel="stylesheet" href="stylePixel.css">
 </head>
 <body>
-    <nav>
-        <ul class="nav-links">
-            <li class="link"><a href="https://tufan74.github.io"> Home</a></li>
-        </ul>
-    </nav>
+    <!-- Header -->
+    <header>
+        <nav>
+            <button id="theme-toggle">🌙</button>
+            <ul class="nav-links">
+                <li class="link"><a href="../index.html">zurück</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>Pixel <span><f>Art</f></span> Generator</h1>
-    
-    <div class="container">
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        <label> Grid Height :</label>
-        <input type="number" id="inputHeight" name="height" min="3" value="10">
-        <label>Grid Width :</label>
-        <input type="number" id="inputWidth" name="width" min="3" value="10">
-        <button class="generateButton" type="submit"> submit </button>
-    </form>
+    <main class="section">
+        <div class="container">
+            <h1>Pixel <span><f>Art</f></span> Generator 🎨</h1>
 
-    <h2>Color :</h2>
-    <input type="color" id="colorPicker">
-    <h2>Canvas : </h2>
-    <table id="pixelCanvas"></table>
-    <button id="canvasDownload" download>Download Picture</button>
-    </div>
+            <h2>Choose Grid Size</h2>
+            <form id="sizePicker">
+                <label>Grid Height:</label>
+                <input type="number" id="inputHeight" name="height" min="3" value="10">
+                <label>Grid Width:</label>
+                <input type="number" id="inputWidth" name="width" min="3" value="10">
+                <button class="generateButton" type="submit">Submit</button>
+            </form>
+
+            <h2>Color :</h2>
+            <input type="color" id="colorPicker">
+
+            <h2>Canvas :</h2>
+            <table id="pixelCanvas"></table>
+
+            <button id="canvasDownload" download>Download Picture</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            © 2025 Tufan Özdemir
+        </div>
+    </footer>
 
     <script src="../pixelart/pixel.js"></script>
-
-    <div class="copyright">
-        Copyright © 2023 Tufan. All Rights Reserved.
-    </div>
-
+    <script src="../script.js"></script> <!-- Darkmode Toggle Script -->
 </body>
 </html>

@@ -1,263 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
-
-<title>Tufan's Portfolio</title>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" href="images/iconbild.png" type="0">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RC8W7EDGW3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RC8W7EDGW3');
-</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tufan</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>  
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <button id="theme-toggle">🌙</button>
+                <ul>
+                    <li><a href="#about">Über mich</a></li>
+                    <li><a href="#projects">Projekte</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <nav>
-    <div class="nav-logo">
-        <a href="https://tufan74.github.io">
-            <img src="/images/logo.png">
-        </a>
-    </div>
-
-    <ul class="nav-links">
-        <li class="link"><a href="#">Home</a></li>
-        <li id="link1" class="link"><a href="#">Features</a></li>
-        <li id="link2" class="link"><a href="#">Projects</a></li>
-        <li id="link3" class="link"><a href="#">About</a></li>
-    </ul>
-  </nav>
-
-
-     <header class="container">
-        <div class="content">
-            <span class="blur"></span>
-            <span class="blur"></span>
-            <h4>This is my own site</h4>
-            <h1>Hi, I'm <span><f>Tufan Özdemir</f></span></h1>
+    <!-- Über mich -->
+   <section id="about" class="section">
+    <div class="container about-container">
+        <div class="about-image">
+            <img src="images/Foto.PNG" alt="Foto">
+        </div>
+        <div class="about-text">
+            <h2>Über mich</h2>
             <p>
-                I am a passionate and driven Computer 
-                Science student with a penchant for problem-solving and a 
-                keen eye for detail. I am dedicated to leveraging technology 
-                to create innovative solutions that address real-world challenges.
+                Hallo! Ich bin Tufan, ein Student der Informatik studiert.
+                Ich liebe es, komplexe Probleme mit eleganten Ansätzen zu lösen.
             </p>
-            <button class="btn">Get Started</button>
         </div>
-        <div class="image">
-            <img src="images/header.png">
-        </div>
-     </header>
+    </div>
+</section>
 
 
-     <section class="container">
-      <h2 class="header">KEY FEATURES</h2>
-      <div class="features">
-          <div class="card">
-              <span><i class="line"></i></span>
-              <h4>Technical Proficiency</h4>
-              <p>
-                I posses a solid foundation in a wide range of 
-                programming languages and technologies, including Python, Java, HTML/CSS, JavaScript.
-              </p>
-              <br>
-              <a href="#">here<i class="ri-arrow-right-line"></i></a>
-          </div>
-          <div class="card">
-              <span><i class="line"></i></span>
-              <h4>Problem-Solving Skills</h4>
-              <p>
-                My academic journey has honed my analytical thinking and problem-solving abilities. 
-                I thrive on tackling complex challenges, breaking them down into manageable components, 
-                and devising elegant solutions.
-              </p>
-              <br>
-              <a href="#">here<i class="ri-arrow-right-line"></i></a>
-          </div>
-          <div class="card">
-              <span><i class="line"></i></span>
-              <h4>Continuous Learner</h4>
-              <p>
-                The dynamic field of Computer Science is ever-evolving, and I'm committed to staying 
-                up-to-date with the latest advancements and trends. I actively engage in self-directed
-                 learning, exploring emerging technologies and methodologies.
-              </p>
-              <br>
-              <a href="#">here<i class="ri-arrow-right-line"></i></a>
-            </div>
-            <div class="card">
-                <span><i class="line"></i></span>
-                <h4>Team Player</h4>
-                <p>
-                    I excel in collaborative environments, valuing open communication and constructive feedback. 
-                    Through group projects and team-based coursework, I've developed strong interpersonal skills, 
-                    allowing me to work effectively with cross-functional teams.
-                </p>
-                <br>
-                <a href="#">here<i class="ri-arrow-right-line"></i></a>
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>💻 Java, Python, C, C#</li>
+                <li>🤝 Teamwork & Kommunikation</li>
+                <li>🌐 HTML, CSS, JavaScript</li>
+                <li>🛠 Git, Github, Gitlab</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projekte</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3><a href="abc.html"> ... </a></h3>
+                    <p> </p>
+                </div>
+                <div class="project-card">
+                    <h3><a href="pixelart/pixel.html">Pixel Art Generator</a></h3>
+                    <p>Eine App zur Erstellung von Pixel-Art-Grafiken mit verschiedenen Tools.</p>
+                </div>
+                <div class="project-card">
+                    <h3><a href="sortier/sortier.html">Sortier Algorithmen</a></h3>
+                    <p>Eine Sammlung von Implementierungen verschiedener Sortieralgorithmen in Python.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="container">
-        <h2 class="header">MY PROJECTS</h2>
-        <p class="sub-header">
-            Here are some projects i made or will made in the future. 
-        </p>
-        <div class="pricing">
-          <div class="card">
-              <div class="content">
-                  <h4>project 1 </h4>
-                  <h3>Pixel Art Generator &#127912</h3>
-                  <p>
-                      <i class="ri-checkbox-circle-line"></i>
-                      with this you can draw a pixelart 
-                  </p>
-                  <p>
-                      <i class="ri-checkbox-circle-line"></i>
-                      you can scale the width and height 
-                  </p>
-                  <p>
-                    <i class="ri-checkbox-circle-line"></i>
-                      you can download it &#128077;
-                </p>
-                <p>
-                    <i class="ri-checkbox-circle-line"></i>
-                      (note fix some problem with home and h1 future)
-                </p>
-              </div>
-              <button class="btn"><a href="../pixelart/pixel.html" target="_blank">to get there click</a></button>
-          </div>
-          <div class="card">
-              <div class="content">
-                  <h4>project 2</h4>
-                  <h3>something in react? starting to learn about it</h3>
-                  <p>
-                      <i class="ri-checkbox-circle-line"></i>
-                      text 
-                  </p>
-                  <p>
-                      <i class="ri-checkbox-circle-line"></i>
-                      text 2
-                  </p>
-                  <p>
-                    <i class="ri-checkbox-circle-line"></i>
-                    text 3 
-                </p>
-            </div>
-            <button class="btn">to get there click</button>
+    <!-- Kontakt -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>📧 <a href="mailto:tufan17017@gmail.com">E-Mail</a></p>
+            <p>🐙 <a href="https://github.com/Tufan74">GitHub</a></p>
         </div>
-        <div class="card">
-            <div class="content">
-                <h4>project 3</h4>
-                <h3>tetris</h3>
-                <p>
-                    <i class="ri-checkbox-circle-line"></i>
-                    soon
-                </p>
-                <p>
-                    <i class="ri-checkbox-circle-line"></i>
-                    text 2
-                </p>
-                <p>
-                    <i class="ri-checkbox-circle-line"></i>
-                    text 3
-                </p>
-                <p>
-                    <i class="ri-checkbox-circle-line"></i>
-                    text 4
-                </p>
-                <p>
-                  <i class="ri-checkbox-circle-line"></i>
-                  text 5
-              </p>
-          </div>
-          <button class="btn"><a href="../tetris/tetris.html" target="_blank">to get there click</a></button>
-      </div>
-  </div>
-</section>
+    </section>
 
+    <footer>
+        <p>© 2025 Tufan Özdemir </p>
+    </footer>
 
-<footer class="container">
-  <span class="blur2"></span>
-  <span class="blur2"></span>
-  <div class="column">
-      <div class="logo">
-          <img src="images/logo.png">
-      </div>
-      <p>
-          all my socials below
-      </p>
-      <div class="socials">
-          <a href="https://github.com/Tufan74" target="_blank"><img src="/images/gitIcon.png" alt="Github"></a>
-          <a href="mailto:Tufan17017@gmail.com"><img src="/images/mailIcon.png" alt="Mail"></a>
-          <a href="https://www.linkedin.com/in/tufan-özdemir-69219b209/"><img src="/images/linkedIcon.png" alt="LinkedIn"></a>
-    </div>
-  </div>
-  <div class="column">
-      <h4>Company</h4>
-      <a href="#">Business</a>
-      <a href="#">Partnership</a>
-      <a href="#">Network</a>
-  </div>
-  <div class="column">
-    <h4>About Me</h4>
-    <a href="#">Blogs</a>
-    <a href="#">Channels</a>
-    <a href="#">Sponsors</a>
-</div>
-<div class="column">
-    <h4>Contact</h4>
-    <a href="#">Contact Me</a>
-    <a href="#">Privicy Policy</a>
-    <a href="#">Terms & Conditions</a>
-</div>
-</footer>
-
-
-<div class="copyright">
-  Copyright © 2023 Tufan. All Rights Reserved.
-</div>
-
-
-<!--
-
-
-
-<header class="header">
-  <div class="container">
-     <h1>I am Tufan</h1>
-     <h2>and I'm a computer science student <br>at the <a href="https://www.uni-due.de" target="_blank">university</a>
-      Duisburg-Essen.</h2>   
-  </div>
-</header>
-
-
-<script src="M0.js"></script>
-
-<footer>
-<div class="social-links container">
-  <a href="https://github.com/Tufan74" target="_blank"><img src="/images/gitIcon.png" alt="Github"></a>
-  <a href="mailto:Tufan0001.0001@gmail.com"><img src="/images/mailIcon.png" alt="Mail"></a>
-</div>
-</footer>
+    <script src="M0.js"></script>
 
 </body>
-
--->
-
-<script src="M0.js"></script>
-
-</body>
-
 </html>
