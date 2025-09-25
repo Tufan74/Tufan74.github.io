@@ -62,19 +62,19 @@ nav {
 
 /* Container */
 .container {
-    margin: 30px auto 1px auto; /* oben 30px, unten 10px */
+    margin: 30px auto 40px auto; /* oben 30px, unten 1px */
     width: 80%;
     max-width: 900px;
     padding: 30px;
     border-radius: 25px;
     border: 2px solid #595959;
-    background-color: #a5a5a5;
+    background-color: #d0d0d0;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;;
 }
 
 .container:hover {
-    background-color: #818181;
+    background-color: #a7a7a7;
     border-color: #535353;
 }
 
@@ -237,7 +237,7 @@ body.dark-mode #algorithm-desc:focus {
     max-width: 800px;
     padding: 15px;
     border-radius: 10px;
-    background-color: #afafaf; /* Hellmodus Standard */
+    background-color: #d0d0d0; /* Hellmodus Standard */
     color: #222;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -247,7 +247,7 @@ body.dark-mode #algorithm-desc:focus {
 
 /* Hover: Text hervorheben */
 .description-container:hover {
-    background-color: #747474; /* dunkler im hellen Modus */
+    background-color: #a7a7a7; /* dunkler im hellen Modus */
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     border:#525252 solid 2px;
 }
@@ -263,6 +263,68 @@ body.dark-mode .description-container:hover {
     background-color: #2a2a2a; /* leicht heller */
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
+
+.code-editor {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  max-width: 700px;
+  margin: 30px auto;
+
+}
+
+.editor-header {
+  background: #2d2d2d;
+  color: #ccc;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.editor-header.light {
+  background: #e8e8e8;
+  color: #333;
+}
+
+.editor-header.dark {
+  background: #2d2d2d;
+  color: #ccc;
+}
+
+.editor-header .filename {
+  margin-left: auto;
+  color: inherit;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.editor-header span.red { background: #ff5f56; }
+.editor-header span.yellow { background: #ffbd2e; }
+.editor-header span.green { background: #27c93f; }
+
+.editor-header span.red,
+.editor-header span.yellow,
+.editor-header span.green {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+pre {
+  margin: 0;
+  padding: 15px;
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: auto;
+  border-radius: 0 0 10px 10px; /* passt zur Editor-Leiste */
+  
+}
+
+
+
 
 
 /* Responsive */
