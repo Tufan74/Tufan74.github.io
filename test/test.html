@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Chatbot</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <div class="chat-container">
+        <button id="theme-toggle" type="button" aria-label="Dark Mode umschalten">🌙</button>
+        <h2>KI-Chatbot</h2>
+        <div class="chat-log" id="chat-log"></div>
+        <form class="chat-input-row" id="chat-form" autocomplete="off">
+            <input type="text" id="chat-input" placeholder="Frage etwas..." required />
+            <button type="submit">Senden</button>
+        </form>
+        <small>Powered by OpenAI GPT-3.5</small>
+    </div>
+<script src="../M0.js"></script>
+
+    <script>
+    
+    // === Chatbot-Logik ===
+    const chatLog = document.getElementById('chat-log');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+
+    function appendMessage(text, sender) {
+        const msg = document.createElement('div');
+        msg.className = 'chat-msg ' + sender;
+        msg.textContent = text;
+        chatLog.appendChild(msg);
+        chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    async function sendToOpenAI(message) {
+        const response = await fetch("https://tufan74-github-io.vercel.app/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ message })
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) {
+            throw new Error(data.error || `Serverfehler (${response.status})`);
+        }
+        return data.answer || "Fehler: Keine Antwort erhalten.";
+    }
+
+    chatForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const userMsg = chatInput.value.trim();
+        if (!userMsg) return;
+        appendMessage(userMsg, "user");
+        chatInput.value = "";
+        chatInput.disabled = true;
+        chatForm.querySelector("button").disabled = true;
+        appendMessage("...", "bot");
+        try {
+            const botMsg = await sendToOpenAI(userMsg);
+            chatLog.removeChild(chatLog.lastChild);
+            appendMessage(botMsg, "bot");
+        } catch (err) {
+            chatLog.removeChild(chatLog.lastChild);
+            appendMessage(`Fehler: ${err.message}`, "bot");
+        }
+        chatInput.disabled = false;
+        chatForm.querySelector("button").disabled = false;
+        chatInput.focus();
+    });
+    </script>
+</body>
+</html>
