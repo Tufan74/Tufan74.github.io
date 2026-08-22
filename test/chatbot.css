@@ -11,6 +11,35 @@ body.dark-mode {
     background: #181818;
     color: #eaeaea;
 }
+header {
+    background: #f4f4f9;
+    padding: 20px 5%;
+}
+body.dark-mode header {
+    background: #181818;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-links a {
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+}
+body.dark-mode .nav-links a {
+    color: #eaeaea;
+}
+.nav-links a:hover {
+    color: #00adb5;
+}
 .chat-container {
     width: 90%;
     max-width: 1200px;
@@ -28,7 +57,6 @@ body.dark-mode .chat-container {
     color: #eaeaea;
 }
 #theme-toggle {
-    align-self: flex-start;
     background: none;
     border: 0.5px solid #535353;
     color: #535353;
