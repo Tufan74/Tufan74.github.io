@@ -34,7 +34,7 @@ module.exports = async function handler(request, response) {
 
     try {
         const geminiResponse = await fetch(
-            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" +
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" +
             encodeURIComponent(process.env.GEMINI_API_KEY),
             {
             method: "POST",
@@ -55,7 +55,7 @@ module.exports = async function handler(request, response) {
         if (!geminiResponse.ok) {
             const errorMessage = geminiResponse.status === 429
                 ? "Gemini-Kontingent aufgebraucht"
-                : "Gemini-Anfrage fehlgeschlagen";
+                : data.error?.message || `Gemini-Fehler (${geminiResponse.status})`;
             return response.status(geminiResponse.status).json({ error: errorMessage });
         }
 
