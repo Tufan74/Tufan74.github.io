@@ -28,30 +28,38 @@ module.exports = async function handler(request, response) {
         return response.status(400).json({ error: "Ungültige Nachricht" });
     }
 
-    if (!process.env.OPENAI_API_KEY) {
-        return response.status(500).json({ error: "OPENAI_API_KEY fehlt" });
+    if (!process.env.GEMINI_API_KEY) {
+        return response.status(500).json({ error: "GEMINI_API_KEY fehlt" });
     }
 
     try {
-        const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
+        const geminiResponse = await fetch(
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" +
+            encodeURIComponent(process.env.GEMINI_API_KEY),
+            {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo",
-                messages: [{ role: "user", content: message }],
-                max_tokens: 200
+                contents: [{
+                    parts: [{ text: message }]
+                }],
+                generationConfig: {
+                    maxOutputTokens: 200
+                }
             })
         });
 
-        const data = await openAIResponse.json();
-        if (!openAIResponse.ok) {
-            return response.status(openAIResponse.status).json({ error: "OpenAI-Anfrage fehlgeschlagen" });
+        const data = await geminiResponse.json();
+        if (!geminiResponse.ok) {
+            const errorMessage = geminiResponse.status === 429
+                ? "Gemini-Kontingent aufgebraucht"
+                : "Gemini-Anfrage fehlgeschlagen";
+            return response.status(geminiResponse.status).json({ error: errorMessage });
         }
 
-        const answer = data.choices?.[0]?.message?.content?.trim();
+        const answer = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
         return response.status(200).json({ answer: answer || "Keine Antwort erhalten." });
     } catch (error) {
         return response.status(500).json({ error: "Interner Serverfehler" });
