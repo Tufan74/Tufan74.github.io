@@ -11,8 +11,17 @@ module.exports = async function handler(request, response) {
         return response.status(405).json({ error: "Methode nicht erlaubt" });
     }
 
-    const message = typeof request.body?.message === "string"
-        ? request.body.message.trim()
+    let requestBody = request.body;
+    if (typeof requestBody === "string") {
+        try {
+            requestBody = JSON.parse(requestBody);
+        } catch (error) {
+            requestBody = {};
+        }
+    }
+
+    const message = typeof requestBody?.message === "string"
+        ? requestBody.message.trim()
         : "";
 
     if (!message || message.length > 4000) {
