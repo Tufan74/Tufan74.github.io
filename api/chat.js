@@ -51,7 +51,7 @@ module.exports = async function handler(request, response) {
                     parts: [{ text: message }]
                 }],
                 generationConfig: {
-                    maxOutputTokens: 500
+                    maxOutputTokens: 2000
                 }
             })
         });
