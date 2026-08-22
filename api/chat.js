@@ -42,11 +42,16 @@ module.exports = async function handler(request, response) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
+                systemInstruction: {
+                    parts: [{
+                        text: "Du bist ein hilfreicher Chatbot. Antworte standardmäßig auf Deutsch, auch wenn die Frage teilweise auf Englisch gestellt wurde. Beantworte die Frage direkt, klar und vollständig. Wechsle nur auf Wunsch des Nutzers die Sprache."
+                    }]
+                },
                 contents: [{
                     parts: [{ text: message }]
                 }],
                 generationConfig: {
-                    maxOutputTokens: 200
+                    maxOutputTokens: 500
                 }
             })
         });
