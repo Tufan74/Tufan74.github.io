@@ -360,6 +360,7 @@ const editorHeader = document.querySelector('.editor-header');
 
 function syncTheme() {
   const isDark = document.body.classList.contains("dark-mode");
+    toggleBtn.textContent = isDark ? "☀️" : "🌙";
   prismLight.disabled = isDark;
   prismDark.disabled = !isDark;
   if (editorHeader) {
@@ -368,10 +369,15 @@ function syncTheme() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', syncTheme);
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+}
+
+syncTheme();
 
 toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
   syncTheme();
 });
 
